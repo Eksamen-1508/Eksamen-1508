@@ -9,9 +9,9 @@ import Button from "../components/Button.astro"
     <nav>
         <ul class="menu">
             <li><a href="/dankortgrøn"> <h1>Dankort Grøn</h1></a></li>
-            <li></li><a href="/kontakt"> <h1>Kontakt</h1></a></li>
-            <li></li><a href="/om"> <h1>Om Dankort</h1></a></li>
-            <li></li><button>Log på</button></li>
+            <li><a href="/kontakt"> <h1>Kontakt</h1></a></li>
+            <li><a href="/om"> <h1>Om Dankort</h1></a></li>
+            <li class="logon_button"><a href="/profil"><h1>Log på</h1></a></li>
         </ul>
         <div class="burger">
                 <div class="line"></div>
@@ -21,7 +21,18 @@ import Button from "../components/Button.astro"
     </nav>
 </header>
 
-<style>
+<style>   
+
+.logon_button {
+    background-color: rgba(228, 30, 40, 1);
+    border-radius: 30px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.logon_button h1 {
+    color: white;
+}
 
 header {
   position: sticky;
@@ -30,8 +41,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  height: 70px;
+  height: 65px;
   background-color: rgba(232, 232, 232, 1);
+}
+
+.logo img {
+  width: 80px;
 }
 
 nav {
@@ -44,6 +59,10 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.menu h1 {
+    font-size: 1rem;
 }
 
 .menu li {
@@ -79,10 +98,11 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   .menu {
     display: none;
   }
+
   .burger {
     display: block;
   }
@@ -105,9 +125,9 @@ nav {
     display: block;
     background-color: rgba(232, 232, 232, 1);
     position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
+    top: 65px;
+    right: 0;
+    width: 45%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
@@ -122,3 +142,25 @@ nav {
 }
 
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+
+    if (!burger || !nav || !menu) return;
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    menu.addEventListener("click", (e) => {
+      if (e.target instanceof HTMLElement && e.target.tagName === "A") {
+        burger.classList.remove("active");
+        nav.classList.remove("active");
+      }
+    });
+  });
+</script>
