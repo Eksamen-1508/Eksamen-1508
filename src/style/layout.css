@@ -1,0 +1,88 @@
+/**************** FORSIDE - MOBIL ******************/
+
+.forside_overskrift h1 {
+  font-size: 1rem;
+  padding: 40px;
+}
+
+/* .halvmobil_img img {
+  width: 100px;
+  align-items: end;
+} */
+
+.forside_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.forside_1-1 h2 {
+  padding-top: 40px;
+  padding-left: 25px;
+}
+
+.forside_1-1 img {
+  width: 180px;
+}
+
+.forside_textbox h3,
+p {
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.forside_textbox {
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.forside_textbox button {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.forside_textbox img {
+  width: 450px;
+}
+
+.partner_text {
+  text-align: center;
+  padding: 25px;
+}
+
+/**************** DANKORT GRØN - MOBIL ******************/
+
+/**************** PROFIL - MOBIL ******************/
+
+/**************** INDLØS - MOBIL ******************/
+
+/**************** KONTAKT - MOBIL ******************/
+
+.kontakt_overskrift {
+  padding: 30px;
+  font-size: 1.7rem;
+}
+
+.kontakt_textbox {
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 20px;
+}
+
+/**************** OM DANKORT - MOBIL ******************/
+
+@media (min-width: 750px) {
+  /**************** FORSIDE - DESKTOP ******************/
+
+  /**************** DANKORT GRØN - DESKTOP ******************/
+
+  /**************** PROFIL - DESKTOP ******************/
+
+  /**************** INDLØS - DESKTOP ******************/
+
+  /**************** KONTAKT - DESKTOP ******************/
+
+  /**************** OM DANKORT - DESKTOP ******************/
+}
