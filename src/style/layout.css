@@ -24,9 +24,13 @@
   width: 180px;
 }
 
-.forside_textbox h3,
-p {
-  padding-left: 30px;
+.forside_textbox h3 {
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+.forside_textbox p {
+  padding-left: 25px;
   padding-top: 15px;
 }
 
@@ -55,12 +59,24 @@ p {
 
 /**************** PROFIL - MOBIL ******************/
 
+.profil_info h1 {
+  padding: 40px 20px;
+}
+
+.profil_info h2 {
+  padding: 5px 20px;
+}
+
+.profil_info h3 {
+  padding: 60px 20px;
+}
+
 /**************** INDLØS - MOBIL ******************/
 
 /**************** KONTAKT - MOBIL ******************/
 
 .kontakt_overskrift {
-  padding: 30px;
+  padding: 40px;
   font-size: 1.7rem;
 }
 
@@ -72,6 +88,43 @@ p {
 }
 
 /**************** OM DANKORT - MOBIL ******************/
+
+.om-overskrift h1 {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.om-overskrift h2 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.om-brødtext p {
+  padding: 30px;
+}
+
+.om_img img {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.vidste-du_textbox {
+  background-color: rgba(255, 218, 152, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 20px;
+}
+
+.vidste-du_textbox,
+h3,
+p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.vidste-du_textbox h3 {
+  padding-top: 30px;
+}
 
 @media (min-width: 750px) {
   /**************** FORSIDE - DESKTOP ******************/
