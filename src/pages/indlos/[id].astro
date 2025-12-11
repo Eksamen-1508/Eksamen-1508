@@ -1,0 +1,43 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import { supabase } from "../../lib/supabase.js";
+
+export const prerender = false;
+
+const { id } = Astro.params;
+
+// Fetch card fra Supabase baseret på id
+const { data: card, error } = await supabase
+  .from('cards')
+  .select('*')
+  .eq('id', id)
+  .single();
+
+if (error) {
+  console.error('Error fetching card:', error);
+}
+
+// Hvis card ikke findes, redirect til profil
+if (!card) {
+    return Astro.redirect('/profil');
+}
+---
+
+<MainLayout>
+    <main>
+        <div class="singleview">
+            <a href="/profil" class="back_button">← Tilbage</a>
+
+            <div class="singleview_content">
+                <img src={card.image} alt={card.title} />
+
+                <div class="singleview_info">
+                    <h1>{card.title}</h1>
+                    <h2>{card.points} point</h2>
+                    <p>{card.description}</p>
+                    <button>Indløs fordel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</MainLayout>
