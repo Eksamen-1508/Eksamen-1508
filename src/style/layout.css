@@ -1,14 +1,30 @@
 /**************** FORSIDE - MOBIL ******************/
 
-.forside_overskrift h1 {
-  font-size: 1rem;
-  padding: 40px;
+.forside_video {
+  position: relative;
+  z-index: -10;
 }
 
-/* .halvmobil_img img {
-  width: 100px;
+.forside_video img {
+  display: block;
+}
+
+.forside_overskrift {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  color: white;
+  font-size: 1rem;
+}
+
+.halvmobil_img img {
+  position: absolute;
+  top: 25.2%;
+  left: 70%;
+  width: 120px;
   align-items: end;
-} */
+  z-index: -9;
+}
 
 .forside_1-1 {
   display: grid;
@@ -21,7 +37,7 @@
 }
 
 .forside_1-1 img {
-  width: 180px;
+  width: 170px;
 }
 
 .forside_textbox h3 {
@@ -46,16 +62,77 @@
   padding-right: 150px;
 }
 
-.forside_textbox img {
-  width: 450px;
-}
-
 .partner_text {
   text-align: center;
   padding: 25px;
 }
 
 /**************** DANKORT GRØN - MOBIL ******************/
+
+.intro-dankort {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.intro-dankort p {
+  padding-top: 20px;
+}
+
+.guide-baggrund {
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.guide-baggrund h2 {
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+.download-button button {
+  margin-top: 20px;
+}
+
+.download-button {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.indløs-img {
+  padding-top: 15px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.box-1 {
+  background-color: rgba(232, 232, 232, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.box-2 {
+  background-color: rgba(33, 48, 63, 1);
+  color: white;
+  border-radius: 20px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.box-3 {
+  background-color: rgba(255, 218, 152, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 25px;
+}
+
+.blomster-kort img {
+  width: 100px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
 
 /**************** PROFIL - MOBIL ******************/
 
