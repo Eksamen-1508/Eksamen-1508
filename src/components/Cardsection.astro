@@ -1,5 +1,7 @@
 ---
-import { supabase } from '../lib/supabase.js';
+
+// import { supabase } from '../lib/supabase.js';
+import {test, supabase} from "../lib/supabase"
 
 // Fetch cards fra Supabase
 const { data: cards, error } = await supabase
@@ -12,10 +14,11 @@ if (error) {
 }
 
 
+console.log(cards)
 ---
 
 <div class="cards_grid">
-    {cards && cards.map((card) => (
+    {cards && cards.map((card: any) => (
         <a href={`/indlos/${card.id}`} class="card">
             <img src={card.image} alt={card.title} />
             <div class="card_label">
