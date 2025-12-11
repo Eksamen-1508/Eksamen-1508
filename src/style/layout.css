@@ -71,7 +71,93 @@
   padding: 60px 20px;
 }
 
+.cards_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 20px 40px 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card_label {
+  padding: 15px;
+  background-color: white;
+}
+
+.card_label p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
 /**************** INDLØS - MOBIL ******************/
+
+.singleview {
+  padding: 20px;
+}
+
+.back_button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: rgba(228, 30, 40, 1);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.back_button:hover {
+  text-decoration: underline;
+}
+
+.singleview_content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.singleview_info {
+  padding: 20px 0;
+}
+
+.singleview_info h1 {
+  margin-bottom: 10px;
+}
+
+.singleview_info h2 {
+  color: rgba(228, 30, 40, 1);
+  margin-bottom: 20px;
+}
+
+.singleview_info p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.singleview_info button {
+  width: 100%;
+}
 
 /**************** KONTAKT - MOBIL ******************/
 
@@ -133,7 +219,37 @@ p {
 
   /**************** PROFIL - DESKTOP ******************/
 
+  .cards_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 40px 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   /**************** INDLØS - DESKTOP ******************/
+
+  .singleview {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .singleview_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .singleview_content img {
+    height: 400px;
+  }
+
+  .singleview_info button {
+    width: auto;
+    padding: 15px 40px;
+  }
 
   /**************** KONTAKT - DESKTOP ******************/
 

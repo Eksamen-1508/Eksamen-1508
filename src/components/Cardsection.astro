@@ -1,0 +1,26 @@
+---
+import { supabase } from '../lib/supabase.js';
+
+// Fetch cards fra Supabase
+const { data: cards, error } = await supabase
+  .from('cards')
+  .select('*')
+  .order('id', { ascending: true });
+
+if (error) {
+  console.error('Error fetching cards:', error);
+}
+
+
+---
+
+<div class="cards_grid">
+    {cards && cards.map((card) => (
+        <a href={`/indlos/${card.id}`} class="card">
+            <img src={card.image} alt={card.title} />
+            <div class="card_label">
+                <p>{card.points} point - {card.title}</p>
+            </div>
+        </a>
+    ))}
+</div>
