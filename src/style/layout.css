@@ -33,11 +33,12 @@
 
 .forside_1-1 h2 {
   padding-top: 40px;
-  padding-left: 25px;
+  padding-left: 40px;
 }
 
 .forside_1-1 img {
   width: 170px;
+  justify-self: end;
 }
 
 .forside_textbox h3 {
@@ -65,6 +66,27 @@
 .partner_text {
   text-align: center;
   padding: 25px;
+}
+
+.partner_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.partner {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 30px;
+  width: 200px;
+  height: 120px;
+  margin: 10px;
+}
+
+.partner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /**************** DANKORT GRØN - MOBIL ******************/
@@ -127,6 +149,19 @@
   padding: 25px;
 }
 
+.kontakt-box {
+  border: 18px solid rgba(232, 232, 232, 1);
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.kontakt-box h3 {
+  margin-bottom: 20px;
+}
+
 .blomster-kort img {
   width: 100px;
   margin: 0 auto;
@@ -135,6 +170,10 @@
 }
 
 /**************** PROFIL - MOBIL ******************/
+
+.skrift-farve {
+  color: rgba(228, 30, 40, 1);
+}
 
 .profil_info h1 {
   padding: 40px 20px;
@@ -289,12 +328,31 @@ p {
   padding-top: 30px;
 }
 
+.app-box {
+  background-color: rgba(33, 48, 63, 1);
+  border-radius: 20px;
+  margin: 25px;
+  padding: 20px;
+  color: white;
+}
+
+.app-box img {
+  rotate: 20deg;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 @media (min-width: 750px) {
   /**************** FORSIDE - DESKTOP ******************/
 
   /**************** DANKORT GRØN - DESKTOP ******************/
 
   /**************** PROFIL - DESKTOP ******************/
+
+  .profil_info {
+    margin-left: 150px;
+  }
 
   .cards_grid {
     grid-template-columns: repeat(3, 1fr);
@@ -329,6 +387,23 @@ p {
   }
 
   /**************** KONTAKT - DESKTOP ******************/
+
+  .kontakt_overskrift {
+    padding: 60px 180px;
+    font-size: 3rem;
+  }
+
+  .kontakt_textbox {
+    background-color: rgba(232, 232, 232, 1);
+    border-radius: 20px;
+    margin: 30px 180px;
+    padding: 60px;
+  }
+
+  .kontakt_textbox p {
+    padding: 0;
+    padding-top: 20px;
+  }
 
   /**************** OM DANKORT - DESKTOP ******************/
 }
