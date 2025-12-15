@@ -6,10 +6,20 @@ import Cardsection from "../components/Cardsection.astro"
 
 <MainLayout>
 	<main>
-        <div class="profil_info">
-            <h1>Hej Lau</h1>
-            <h2>Du har <span class="skrift-farve">900 point</span></h2>
-            <h3>Indløs dine fordele</h3>
+        <div class="profil_grid">
+            <div class="profil_info">
+                <h1>Hej Lau</h1>
+                <h2>Du har <span class="skrift-farve">900 point</span></h2>
+                <h3>Indløs dine fordele</h3>
+            </div>
+            <div class="badge_profil">
+                <div class="friday_badge">
+                    <img src="../public/imgs/nobuyfriday.svg" alt="Badge">
+                </div>
+                <div>
+                    <img src="../public/imgs/mindfullmonth.svg" alt="Badge">
+                </div>
+            </div>
         </div>
 
         <Cardsection />

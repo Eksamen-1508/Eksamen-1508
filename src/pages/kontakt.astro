@@ -9,9 +9,26 @@ import MainLayout from "../layouts/MainLayout.astro"
         <div class="kontakt_textbox">
             <h2>Kundeservice</h2>
             <p>Har du spørgsmål til vores Dankort Grøn kampagne eller brug for hjælp til at oprette din profil, er du altid velkommen til at kontakte vores kundeservice på 
-                44 89 24 00. Vi har åbent hverdage mellem kl. 8.00 - 17.00.</p>
+                <span class="highlight">44 89 24 00.</span> Vi har åbent hverdage mellem kl. 8.00 - 17.00.</p>
         </div>
         <img src="../public/imgs/siden1983.webp" alt="Dankort, på beløbet siden 1983">
 	</main>
+
+        <script>
+  const highlights = document.querySelectorAll('.highlight');
+
+  function checkScroll() {
+    highlights.forEach(highlight => {
+      const rect = highlight.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.8) {
+        highlight.style.backgroundSize = '100% 100%';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+</script>
 
 </MainLayout>
