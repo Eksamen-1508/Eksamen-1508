@@ -3,24 +3,26 @@
 ---
 
 <footer>
-    <div class="footer_left">
-        <img src="/public/imgs/logo.svg" alt="Dankort logo i grøn">
-        <h2>Dankort Grøn</h2>
-        <h2>Handle mindre, oplev mere</h2>
-    </div>
+    <div class="footer_grid">
+        <div class="footer_left">
+            <img src="/public/imgs/grønlogo.webp" alt="Dankort logo i grøn">
+            <h2>Dankort Grøn</h2>
+            <h2>Handle mindre, oplev mere</h2>
+        </div>
     
-    <div class="footer_right">
-        <div class="footer_text">
-            <h3>Kontakt</h3>
-            <p>45+ 44 89 24 00</p>
-        </div>
-        <div class="footer_text">
-            <h3>Betingelser</h3>
-            <p>Brugerbetingelser</p>
-        </div>
-        <div class="footer_text">
-            <h3>Politikker</h3>
-            <p>Privatspolitikker</p>
+        <div class="footer_right">
+            <div class="footer_text">
+                <h3>Kontakt</h3>
+                <p>45+ 44 89 24 00</p>
+            </div>
+            <div class="footer_text">
+                <h3>Betingelser</h3>
+                <p>Brugerbetingelser</p>
+            </div>
+            <div class="footer_text">
+                <h3>Politikker</h3>
+                <p>Privatspolitikker</p>
+            </div>
         </div>
     </div>
 
@@ -30,6 +32,8 @@
 
 footer {
     background-color: rgba(232, 232, 232, 1);
+    border-radius: 30px;
+    margin: 20px;
 }    
 
 .footer_left img {
@@ -37,7 +41,7 @@ footer {
 }
 
 .footer_left {
-    padding: 20px;
+    padding: 30px;
 }
 
 .footer_left h2 {
@@ -46,7 +50,7 @@ footer {
 
 .footer_right {
     text-align: right;
-    padding: 20px;
+    padding-right: 15px;
 }
 
 .footer_text {
@@ -55,6 +59,7 @@ footer {
 
 .footer_text p {
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .footer_text p:hover {
@@ -64,13 +69,22 @@ footer {
 
 @media (min-width: 750px) {
 
-.footer_img {
-
+.footer_grid {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
 }
 
 .footer_right {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    padding-top: 0;
 }
+
+.footer_left {
+    padding-top: 100px;
 }
+
+}
+
 </style>

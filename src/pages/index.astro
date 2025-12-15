@@ -6,24 +6,27 @@ import MainLayout from "../layouts/MainLayout.astro"
 	
 	<main>
 		<div class="forside_video">
-			<img src="../public/imgs/placeholder.png" alt="Forside video af natur">
+			<video src="../public/video/dankortvideo.mp4" loop autoplay muted></video>
 			<h1 class="forside_overskrift">Små valg. Større værdi. <br>
 			Beløn de handlinger, der gør <br>hverdagen grønnere.</h1>
 		</div>
-		<div class="halvmobil_img">
-			<img src="../public/imgs/halvmobil.webp" alt="en illustration på appen">
-		</div>
 		<div class="forside_1-1">
-			<h2>Fælles handling gør den største forskel</h2>
+			<h2>Fælles handling gør den største <span class="highlight">forskel</span></h2>
 			<img src="../public/imgs/danmark.svg" alt="Danmark">
 		</div>
 
 		<div class="forside_textbox">
-			<h3>Brug Dankort mindre <br>- brug eftertanken mere</h3>
-			<p>Dankort Grøn er ikke en sparekampagne, men en tænk-kampagne. 
+			<div>
+				<h3>Brug Dankort mindre <br>- <span class="highlight">brug eftertanken</span> mere</h3>
+				<p>Dankort Grøn er ikke en sparekampagne, men en tænk-kampagne. 
 				Et lille øjebliks refleksion kan spare både penge og ressourcer.</p>
-			<img src="../public/imgs/fysiskkort.svg" alt="Et fysisk dankort">
-			<a href="/dankortgron"><button>Dankort Grøn</button></a>
+			</div>
+			<div>
+				<img src="../public/imgs/fysiskkort.svg" alt="Et fysisk dankort">
+			</div>
+			<div class="gron_button">
+				<a href="/dankortgron"><button>Dankort Grøn</button></a>
+			</div>
 		</div>
 
 		<h2 class="partner_text">Samarbejdspartnere</h2>
@@ -68,5 +71,22 @@ import MainLayout from "../layouts/MainLayout.astro"
 		</div>
 
 	</main>
+
+	<script>
+  const highlights = document.querySelectorAll('.highlight');
+
+  function checkScroll() {
+    highlights.forEach(highlight => {
+      const rect = highlight.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.8) {
+        highlight.style.backgroundSize = '100% 100%';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+</script>
 
 </MainLayout>

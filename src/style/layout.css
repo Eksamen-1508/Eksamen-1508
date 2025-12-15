@@ -1,39 +1,39 @@
 /**************** FORSIDE - MOBIL ******************/
 
-.forside_video {
-  position: relative;
-  z-index: -10;
+video {
+  width: 100%;
 }
 
-.forside_video img {
-  display: block;
+.forside_video {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.forside_video video {
+  overflow: hidden;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .forside_overskrift {
   position: absolute;
-  top: 40px;
+  top: 150px;
   left: 20px;
   color: white;
-  font-size: 1rem;
-}
-
-.halvmobil_img img {
-  position: absolute;
-  top: 25.2%;
-  left: 70%;
-  width: 120px;
-  align-items: end;
-  z-index: -9;
+  font-size: 1.2rem;
 }
 
 .forside_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 220px;
 }
 
 .forside_1-1 h2 {
   padding-top: 40px;
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .forside_1-1 img {
@@ -127,8 +127,54 @@
   margin: 0 auto;
 }
 
+.oplevelse_img img {
+  border-radius: 20px;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.badges_grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.badges_grid h3 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.badges_text p {
+  text-align: center;
+  padding: 10px;
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  padding-top: 40px;
+}
+
+.badges p {
+  max-width: 65ch;
+}
+
+.badges h4 {
+  padding-top: 60px;
+}
+
+.badges img {
+  width: 190px;
+  margin-left: 100px;
+  padding-top: 20px;
+}
+
 .box-1 {
-  background-color: rgba(232, 232, 232, 1);
+  background-color: rgba(58, 104, 47, 1);
+  color: white;
   border-radius: 20px;
   margin: 25px;
   padding: 25px;
@@ -170,6 +216,28 @@
 }
 
 /**************** PROFIL - MOBIL ******************/
+
+.profil_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.badge_profil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+
+.friday_badge {
+  justify-items: end;
+  padding-right: 20px;
+}
+
+.profil_grid img {
+  width: 60px;
+}
 
 .skrift-farve {
   color: rgba(228, 30, 40, 1);
@@ -346,9 +414,145 @@ p {
 @media (min-width: 750px) {
   /**************** FORSIDE - DESKTOP ******************/
 
+  .forside_overskrift {
+    position: absolute;
+    top: 280px;
+    left: 50px;
+    color: white;
+    font-size: 3rem;
+    line-height: 60px;
+  }
+
+  .forside_1-1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 0px;
+    margin-bottom: 25px;
+    margin-top: 720px;
+  }
+
+  .forside_1-1 h2 {
+    font-size: 2.8rem;
+    line-height: 50px;
+  }
+
+  .forside_1-1 img {
+    padding-top: 40px;
+    width: 200px;
+  }
+
+  .forside_textbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .forside_textbox h3 {
+    padding-top: 40px;
+  }
+
+  .gron_button {
+    position: absolute;
+    padding-top: 250px;
+    padding-left: 30px;
+  }
+
+  .partner_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
   /**************** DANKORT GRØN - DESKTOP ******************/
 
+  .intro-dankort {
+    max-width: 1000px;
+    margin: 0 auto;
+    max-width: 65ch;
+  }
+
+  .guide-baggrund {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 50px;
+  }
+
+  .dankort_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dankort_button {
+    position: absolute;
+    padding-top: 220px;
+    gap: 20px;
+    padding-left: 40px;
+  }
+
+  .dankortgron_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+  }
+
+  .dankortgron_1-1 h2 {
+    padding-top: 120px;
+  }
+
+  .dankortgron-img {
+    order: -1;
+  }
+
+  .dankortgron-button {
+    position: absolute;
+    padding-top: 210px;
+    gap: 20px;
+    padding-left: 470px;
+  }
+
+  .oplevelse_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+  }
+
+  .oplevelse_1-1 h2 {
+    padding-top: 130px;
+  }
+
+  .box_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .kontakt-box {
+    max-width: 1000px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+
+  .kontakt-box h3 {
+    padding-top: 15px;
+  }
+
+  .kontakt-box a {
+    padding-top: 15px;
+  }
+
   /**************** PROFIL - DESKTOP ******************/
+
+  .profil_grid img {
+    width: 80px;
+  }
 
   .profil_info {
     margin-left: 150px;
@@ -403,7 +607,58 @@ p {
   .kontakt_textbox p {
     padding: 0;
     padding-top: 20px;
+    max-width: 65ch;
   }
 
   /**************** OM DANKORT - DESKTOP ******************/
+
+  .om_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .om-overskrift h1 {
+    padding-top: 160px;
+  }
+
+  .om-overskrift h2 {
+    padding-top: 50px;
+  }
+
+  .om-brødtext p {
+    padding-left: 50px;
+  }
+
+  .om_img img {
+    padding-top: 50px;
+  }
+
+  .om_main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .app-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app-box h2 {
+    padding-top: 80px;
+    padding-left: 15px;
+  }
+
+  .app_img img {
+    width: 150px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .download_buttons {
+    position: absolute;
+    padding-top: 220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }

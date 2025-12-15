@@ -3,20 +3,22 @@ import MainLayout from "../layouts/MainLayout.astro"
 ---
 
 <MainLayout>
-	<main>
-        <div class="om-overskrift om-brødtext">
-            <h1>Fakta om Dankort</h1>
-            <p>Dankort er danskernes foretrukne betalingsmiddel og det kort, der står for flest transaktioner i Danmark.</p>
-        </div>
+	<main class="om_main">
+        <div class="om_1-1">
+            <div class="om-overskrift om-brødtext">
+                <h1>Fakta om Dankort</h1>
+                <p>Dankort er <span class="highlight">danskernes foretrukne betalingsmiddel</span> og det kort, der står for flest transaktioner i Danmark.</p>
+            </div>
         
-        <div class="om_img">
-        <img src="../public/imgs/betal.webp" alt="Betal med dankort">
+            <div class="om_img">
+            <img src="../public/imgs/betal.webp" alt="Betal med dankort">
+            </div>
         </div>
 
         <div class="om-overskrift om-brødtext">
             <h2>Historien om Dankort</h2>
-            <p>Dankort blev lanceret i 1983, da hver bank tidligere havde sit eget betalingskort, hvilket var både dyrt og ineffektivt. Derfor gik de danske pengeinstitutter sammen om at skabe én fælles løsning: Dankort. I dag drives og ejes det af Nets.
-            <br><br>Dankortet er Danmarks nationale betalingskort og fungerer i dag ofte som et Visa/Dankort - en kombination af den danske Dankort-funktionalitet og det internationale Visa-system. Det gør, at du kan betale og hæve penge både i Danmark og i udlandet. Kortet er et debetkort, hvilket betyder, at beløbet trækkes direkte fra din bankkonto med det samme eller dagen efter, så du altid har et klart overblik over dit forbrug.</p>
+            <p>Dankort blev lanceret i 1983, da hver bank tidligere havde sit eget betalingskort, hvilket var både dyrt og ineffektivt. Derfor gik de danske pengeinstitutter sammen om at skabe <span class="highlight">én fælles løsning: Dankort.</span> I dag drives og ejes det af Nets.
+            <br><br>Dankortet er Danmarks nationale betalingskort og fungerer i dag ofte som et Visa/Dankort - en kombination af den danske Dankort-funktionalitet og det internationale Visa-system. Det gør, at du kan betale og hæve penge både i Danmark og i udlandet. Kortet er et debetkort, hvilket betyder, at beløbet trækkes direkte fra din bankkonto med det samme eller dagen efter, så du <span class="highlight">altid har et klart overblik over dit forbrug.</span></p>
         </div>
 
         <div class="om-overskrift om-brødtext">
@@ -55,10 +57,14 @@ import MainLayout from "../layouts/MainLayout.astro"
             <p>Det er mere end der er voksne danskere - hvilket betyder, at mange har flere kort eller kombikort.</p>
         </div>
         <div class="app-box">
-        <h2>Hav alle dine fordele lige ved hånden</h2>
-        <p>I appen kan du tilmelde dit Dankort, optjene fordele og følge med i dine point – og meget mere. Du kan hente appen i App Store eller Google Play.</p>
-        <img src="../public/imgs/appen.webp" alt="Illustration af appen">
-        <div class="download-button">
+            <div>
+            <h2>Hav alle dine fordele lige ved hånden</h2>
+            <p>I appen kan du tilmelde dit Dankort, optjene fordele og følge med i dine point – og meget mere. Du kan hente appen i App Store eller Google Play.</p>
+            </div>
+            <div class="app_img">
+                <img src="../public/imgs/appen.webp" alt="Illustration af appen">
+            </div>
+            <div class="download-button download_buttons">
 				<div>
 					<button>Download App Store</button>
 				</div>
@@ -68,5 +74,22 @@ import MainLayout from "../layouts/MainLayout.astro"
 			</div>
         </div>
 	</main>
+
+    <script>
+  const highlights = document.querySelectorAll('.highlight');
+
+  function checkScroll() {
+    highlights.forEach(highlight => {
+      const rect = highlight.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.8) {
+        highlight.style.backgroundSize = '100% 100%';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+</script>
 
 </MainLayout>

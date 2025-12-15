@@ -12,45 +12,100 @@ import MainLayout from "../layouts/MainLayout.astro"
 		</div>
 		
 		<div class="guide-baggrund">
-			<h2>Opret eller log ind på din profil</h2>
-			<p>For at optjene point skal du oprette en profil og registrere dit Dankort. Du kan gøre det direkte på vores 
-			hjemmeside eller ved at downloade og bruge vores app.</p>
-			<img src="../public/imgs/hjemmesiden.svg" alt="illustration af hjemmesiden">
-			<div class="download-button">
+			<div class="dankort_1-1">
 				<div>
-					<button>Download App Store</button>
+					<h2>Opret eller log ind på din profil</h2>
+					<p>For at <span class="highlight">optjene point</span> skal du oprette en profil og registrere dit Dankort. Du kan gøre det direkte på vores 
+					hjemmeside eller ved at <span>downloade og bruge vores app.</span></p>
 				</div>
 				<div>
-					<button>Download Google Play</button>
+					<img src="../public/imgs/hjemmesiden.svg" alt="illustration af hjemmesiden">
+				</div>
+				<div class="download-button dankort_button">
+					<div>
+						<button>Download App Store</button>
+					</div>
+					<div>
+						<button>Download Google Play</button>
+					</div>
 				</div>
 			</div>
 
-			<h2>Vælg en af dine fordele </h2>
-			<p>Du kan vælge fx gratis entre til et museum og klik på ‘Indløs point’</p>
-			<img class="indløs-img" src="../public/imgs/indløs.webp" alt="Illustration af man indløser sin fordel">
-			<div class="download-button">
-				<a href="/profil"><button>Gå til din profil</button></a>
+			<div class="dankortgron_1-1">
+				<div>
+					<h2>Vælg en af dine fordele </h2>
+					<p>Du kan vælge fx gratis entre til et museum og klik på <span class="highlight">‘Indløs fordel’</span></p>
+				</div>
+				<div class="dankortgron-img">
+					<img class="indløs-img" src="../public/imgs/indløs.webp" alt="Illustration af man indløser sin fordel">
+				</div>
+				<div class="download-button dankortgron-button">
+					<a href="/profil"><button>Gå til din profil</button></a>
+				</div>
+			</div>
+			<div class="oplevelse_1-1">
+				<div>
+					<h2>En oplevelse venter - nu med rabat</h2>
+					<p>Du får nu gratis entré til et museum. Vis blot kuponen ved indgangen – så er du en oplevelse rigere.</p>
+				</div>
+				<div class="oplevelse_img">
+					<img src="../public/imgs/oplevelsemuseum.webp" alt="Et billede af en oplevelse">
+				</div>
+			</div>
+		</div>
+		<div class="badges_grid">
+			<div class="badges_text">
+				<h3>Bliv belønnet med badges for dine gode valg</h3>
+				<p>På din profil kan du optjene badges, der viser din indsats for et mere bevidst og bæredygtigt forbrug. 
+					Badges er ikke baseret på, hvor meget du køber – men på de valg, du vælger ikke at tage.</p>
+				<p>Du kan have 0 til alle 4 badges på din profil, alt efter hvor aktiv du er inden for de forskellige områder. 
+					Badges fungerer både som motivation og som <span class="highlight">et personligt overblik over dine bæredygtige valg.</span></p>
+			</div>
+			<div class="badges">
+
+				<img src="../public/imgs/nobuyfriday.svg" alt="Badge">
+				<div>
+					<h4>No Buy Friday</h4>
+					<p>Opnås ved at lade være med at handle under Black Friday og andre store tilbudsperioder.</p>
+				</div>
+
+				<img src="../public/imgs/repairbadge.svg" alt="Badge">
+				<div>
+					<h4>Repair Badge</h4>
+					<p>Belønner dig, når du reparerer eller genbruger det, du allerede har, frem for at købe nyt.</p>
+				</div>
+
+				<img src="../public/imgs/lokalbadge.svg" alt="Badge">
+				<div class="">
+					<h4>Lokal Badge</h4>
+					<p>Optjenes ved at støtte lokale initiativer og vælge lokale løsninger frem for masseforbrug.</p>
+				</div>
+
+				<img src="../public/imgs/mindfullmonth.svg" alt="Badge">
+				<div>
+					<h4>Mindful Month</h4>
+					<p>Fokuserer på bevidst forbrug over tid – for eksempel ved at gennemføre en måned med færre eller mere gennemtænkte køb.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="box_section">
+			<div class="box-1">
+				<h3>Med Dankort Grøn får du blandt andet</h3>
+				<p>+ Gratis oplevelser </p>
+				<p>+ Rabat på oplevelser</p>
+				<p>+ Medlemskaber</p>
 			</div>
 
-			<h2>En oplevelse venter - nu med rabat</h2>
-			<p>Du får nu gratis entré til et museum. Vis blot kuponen ved indgangen – så er du en oplevelse rigere.</p>
-		</div>
+			<div class="box-2">
+				<h3>Godt at vide om Dankort Grøn</h3>
+				<p>Dankort Grøn giver dig adgang til rabatter og oplevelser. Vi sørger for din data bliver sikkert hentet og er anonymt.</p>
+			</div>
 
-		<div class="box-1">
-			<h3>Med Dankort Grøn får du blandt andet</h3>
-			<p>+ Rabat på oplevelser</p>
-			<p>+ Gratis oplevelser </p>
-			<p>+ Medlemskaber</p>
-		</div>
-
-		<div class="box-2">
-			<h3>Godt at vide om Dankort Grøn</h3>
-			<p>Dankort Grøn giver dig adgang til rabatter og oplevelser. Det koster ikke noget at oprette en Dankort Grøn profil. </p>
-		</div>
-
-		<div class="box-3">
-			<h3>Sådan optjener du point</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facilis unde repudiandae ea itaque molestias laboriosam tempore maxime.</p>
+			<div class="box-3">
+				<h3>Sådan optjener du point</h3>
+				<p>Du optjener point, samtidig med at du låser op for dine badges. Pointene gives inden for de fire badge-kategorier.</p>
+			</div>
 		</div>
 
 		<div class="kontakt-box">
@@ -61,6 +116,24 @@ import MainLayout from "../layouts/MainLayout.astro"
 		<div class="blomster-kort">
 			<img src="../public/imgs/blomsterkort.svg" alt="Dankort tegning med blomstr omkring">
 		</div>
+		
 	</main>
+
+	<script>
+  const highlights = document.querySelectorAll('.highlight');
+
+  function checkScroll() {
+    highlights.forEach(highlight => {
+      const rect = highlight.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.8) {
+        highlight.style.backgroundSize = '100% 100%';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+</script>
 
 </MainLayout>
