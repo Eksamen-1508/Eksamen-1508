@@ -233,6 +233,7 @@ video {
 .friday_badge {
   justify-items: end;
   padding-right: 20px;
+  justify-self: flex-end;
 }
 
 .profil_grid img {
